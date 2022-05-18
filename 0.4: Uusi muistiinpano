@@ -1,0 +1,29 @@
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+palvelin-->selain: HTML-koodi
+
+note over selain:
+
+selain tekee HTTP POST-pyynnön eli uudelleenohjaispyynnön palvelimen osoitteeseen new_note.
+
+Uudelleenojauspyynnön eli HTTP-satuskooodin 302 avulla palvelin kehottaa selainta tekemään uuden HTTP GET -pyynnön osoitteeseen notes.
+end note
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+palvelin-->selain: HTML-koodi
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+palvelin-->selain: main.css
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+palvelin-->selain: main.js
+
+note over selain:
+selain alkaa suorittaa js-koodia
+joka pyytää JSON-datan palvelimelta
+end note
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin-->selain: [{ content:"Moi", date: <2022-05-18" } ...]
+
+note over selain:
+selain suorittaa tapahtumankäsittelijän
+joka renderöi muistiinpanot ja uuden kommentin näytölle
+end note
