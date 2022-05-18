@@ -5,7 +5,7 @@ note over selain:
 
 selain tekee HTTP POST-pyynnön eli uudelleenohjaispyynnön palvelimen osoitteeseen new_note.
 
-Uudelleenojauspyynnön eli HTTP-satuskooodin 302 avulla palvelin kehottaa selainta tekemään uuden HTTP GET -pyynnön osoitteeseen notes.
+Uudelleenojauspyynnön avulla palvelin kehottaa selainta tekemään uuden HTTP GET -pyynnön osoitteeseen notes.
 end note
 
 selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
