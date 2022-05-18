@@ -1,0 +1,13 @@
+note over selain:
+käyttäjä kirjoittaa muistiinpanon sivulle Notes -- single page app ja painaa tallenna.
+Pyyntö sisältää JSON-muodossa olevan uuden muistiinpanon, johon kuuluu sisältö (content) ja aikaleima(date).
+{content: "moi", date: "2022-05-18T12:03:29.039Z"}
+end note 
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+palvelin->selain: 201 created
+
+note over selain
+sivulle tallentuu uusi komentti
+end note
